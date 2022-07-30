@@ -32,11 +32,13 @@ const SignUp = () => {
     if (token) {
         navigate('/appointment');
     }
+
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         // navigate("/appointment");
     }
+
     return (
         <div className='flex justify-center items-center my-12'>
             <div className="card w-96 bg-base-100 shadow-xl">
