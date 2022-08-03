@@ -6,6 +6,7 @@ const MyReview = () => {
             <h2>My review</h2>
         </div>
     );
+
 };
 
 export default MyReview;

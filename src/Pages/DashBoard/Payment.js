@@ -12,7 +12,7 @@ const stripePromise = loadStripe('pk_test_51LRf4qKqB6yxEpg7JdpNZPg9pjBBS6qqUVBa5
 const Payment = () => {
     const { id } = useParams();
     const url = `http://localhost:5000/booking/${id}`;
-    const [booking, setBooking] = useState([]);
+    const [booking, setBooking] = useState(null);
     useEffect(() => {
         fetch(url, {
             method: 'GET',
@@ -32,17 +32,18 @@ const Payment = () => {
         <div>
             <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
                 <div class="card-body">
-                    <h2 class="card-title">Pay for {booking.treatement}</h2>
-                    <p>Your appointment {booking.date} at {booking.slot}</p>
-                    <p>Please pay: ${booking.price} </p>
+                    <h2 class="card-title">Pay for {booking?.treatement}</h2>
+                    <p>Your appointment {booking?.date} at {booking?.slot}</p>
+                    <p>Please pay: ${booking?.price} </p>
                 </div>
             </div>
             <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
                 <div class="card-body">
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm
+                        {booking && <CheckoutForm
                             booking={booking}
-                        />
+                        />}
+
                     </Elements>
                 </div>
             </div>
