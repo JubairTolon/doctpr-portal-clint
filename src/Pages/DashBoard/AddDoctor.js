@@ -78,8 +78,7 @@ const AddDoctor = () => {
     return (
         <div className='flex items-center justify-center flex-col'>
             <h2 className="text-2xl mb-12 font-bold">Add a new Doctor</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
-
+            <form className='border-2 rounded py-10 px-12' onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Name</span>
@@ -155,7 +154,6 @@ const AddDoctor = () => {
                         {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
                     </label>
                 </div>
-
                 <input className='btn w-full max-w-xs text-white' type="submit" value='Add' />
             </form>
         </div>
