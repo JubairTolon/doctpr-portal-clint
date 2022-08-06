@@ -9,7 +9,7 @@ const AddDoctor = () => {
 
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/service')
+        fetch('https://fast-brook-41352.herokuapp.com/service')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
@@ -18,7 +18,7 @@ const AddDoctor = () => {
         <Loading></Loading>
     }
 
-    // const { data: services, isLoading } = useQuery('service', () => fetch('http://localhost:5000/service').then(res => res.json()));
+    // const { data: services, isLoading } = useQuery('service', () => fetch('https://fast-brook-41352.herokuapp.com/service').then(res => res.json()));
 
     // if (isLoading) {
     //     return <Loading></Loading>
@@ -54,7 +54,7 @@ const AddDoctor = () => {
                         img: img
                     }
                     //send to your database
-                    fetch('http://localhost:5000/doctor', {
+                    fetch('https://fast-brook-41352.herokuapp.com/doctor', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -76,8 +76,8 @@ const AddDoctor = () => {
             })
     }
     return (
-        <div>
-            <h2 className="text-2xl">Add a new Doctor</h2>
+        <div className='flex items-center justify-center flex-col'>
+            <h2 className="text-2xl mb-12 font-bold">Add a new Doctor</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="form-control w-full max-w-xs">

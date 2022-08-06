@@ -8,7 +8,7 @@ const ManageDoctor = () => {
     const [deleteDoctor, setDeleteDoctor] = useState(null);
     const [doctors, setDoctors] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/doctor', {
+        fetch('https://fast-brook-41352.herokuapp.com/doctor', {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -21,8 +21,8 @@ const ManageDoctor = () => {
         <Loading></Loading>
     }
     return (
-        <div>
-            <h2 className='text-2xl'>manage doctor:{doctors.length}</h2>
+        <div className=''>
+            <h2 className='text-2xl my-4'>Manage Doctor: {doctors.length}</h2>
             {<div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>

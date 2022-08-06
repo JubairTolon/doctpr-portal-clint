@@ -15,7 +15,7 @@ const CheckoutForm = ({ booking }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://fast-brook-41352.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -93,7 +93,7 @@ const CheckoutForm = ({ booking }) => {
                 transactionId: paymentIntent.id,
             }
 
-            fetch(`http://localhost:5000/booking/${_id}`, {
+            fetch(`https://fast-brook-41352.herokuapp.com/booking/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

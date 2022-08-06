@@ -20,7 +20,7 @@ import Payment from "./Pages/DashBoard/Payment";
 
 function App() {
   return (
-    <div className='max-w-7xl mx-auto'>
+    <div className='w-100vh mx-auto'>
       <Nav></Nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
