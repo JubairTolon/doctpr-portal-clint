@@ -35,7 +35,7 @@ const Nav = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-3xl">Doctor Portal</a>
+                <Link to='/' className="btn btn-ghost normal-case text-3xl">Doctor Portal</Link>
             </div>
             <div className="navbar-center hidden lg:flex ">
                 <ul className="font-bold text-m text-neutral-focus menu menu-horizontal p-0 ">
