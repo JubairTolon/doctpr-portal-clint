@@ -23,7 +23,6 @@ const Users = () => {
             .then(res => res.json())
             .then(data => setUsers(data));
     }, []);
-
     if (Loading) {
         <Loading></Loading>
     }

@@ -56,7 +56,7 @@ const BookingModal = ({ date, treatement, setTreatement, refetch }) => {
                     <h3 className="font-bold text-lg text-secondary">Booking for: {name}</h3>
                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 justify-items-center mt-6'>
                         <input type="text" disabled value={format(date, 'PP')} className="input input-bordered w-full max-w-xs" />
-                        <select name='slot' className="select select-bordered w-full max-w-xs">
+                        <select name='slot' className="select rounded-lg w-full max-w-xs">
                             {
                                 slots.map((slot, index) => <option
                                     key={index}
