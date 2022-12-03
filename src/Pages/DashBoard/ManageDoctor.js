@@ -8,7 +8,7 @@ const ManageDoctor = () => {
     const [deleteDoctor, setDeleteDoctor] = useState(null);
     const [doctors, setDoctors] = useState([]);
     useEffect(() => {
-        fetch('https://fast-brook-41352.herokuapp.com/doctor', {
+        fetch('https://doctor-portal-server-mauve.vercel.app/doctor', {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }

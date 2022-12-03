@@ -5,7 +5,7 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const Users = () => {
-    // const { data: users, isLoading, isError, error } = useQuery('users', () => fetch('https://fast-brook-41352.herokuapp.com/user', {
+    // const { data: users, isLoading, isError, error } = useQuery('users', () => fetch('https://doctor-portal-server-mauve.vercel.app/user', {
     //     method: 'GET',
     //     headers: {
     //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -14,7 +14,7 @@ const Users = () => {
 
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('https://fast-brook-41352.herokuapp.com/user', {
+        fetch('https://doctor-portal-server-mauve.vercel.app/user', {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

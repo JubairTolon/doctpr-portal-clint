@@ -8,7 +8,7 @@ const useAdmin = user => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`https://fast-brook-41352.herokuapp.com/admin/${email}`, {
+            fetch(`https://doctor-portal-server-mauve.vercel.app/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

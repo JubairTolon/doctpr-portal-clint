@@ -12,7 +12,6 @@ const BookingModal = ({ date, treatement, setTreatement, refetch }) => {
 
     const handleBooking = event => {
         event.preventDefault();
-        console.log(name)
         const slot = event.target.slot.value;
         const booking = {
             treatementId: _id,
@@ -25,7 +24,7 @@ const BookingModal = ({ date, treatement, setTreatement, refetch }) => {
             phone: event.target.phone.value,
         };
 
-        fetch('https://fast-brook-41352.herokuapp.com/booking', {
+        fetch('https://doctor-portal-server-mauve.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

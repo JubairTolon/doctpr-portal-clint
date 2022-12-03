@@ -9,7 +9,7 @@ const AddDoctor = () => {
 
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://fast-brook-41352.herokuapp.com/service')
+        fetch('https://doctor-portal-server-mauve.vercel.app/service')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
@@ -18,7 +18,7 @@ const AddDoctor = () => {
         <Loading></Loading>
     }
 
-    // const { data: services, isLoading } = useQuery('service', () => fetch('https://fast-brook-41352.herokuapp.com/service').then(res => res.json()));
+    // const { data: services, isLoading } = useQuery('service', () => fetch('https://doctor-portal-server-mauve.vercel.app/service').then(res => res.json()));
 
     // if (isLoading) {
     //     return <Loading></Loading>
@@ -54,7 +54,7 @@ const AddDoctor = () => {
                         img: img
                     }
                     //send to your database
-                    fetch('https://fast-brook-41352.herokuapp.com/doctor', {
+                    fetch('https://doctor-portal-server-mauve.vercel.app/doctor', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

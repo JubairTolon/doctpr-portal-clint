@@ -5,7 +5,7 @@ const DeleteConfirmModal = ({ deleteDoctor, setDeleteDoctor }) => {
     const { name, email } = deleteDoctor;
 
     const handleDelete = () => {
-        fetch(`https://fast-brook-41352.herokuapp.com/doctor/${email}`, {
+        fetch(`https://doctor-portal-server-mauve.vercel.app/doctor/${email}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -15,7 +15,7 @@ const CheckoutForm = ({ booking }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect(() => {
-        fetch('https://fast-brook-41352.herokuapp.com/create-payment-intent', {
+        fetch('https://doctor-portal-server-mauve.vercel.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -93,7 +93,7 @@ const CheckoutForm = ({ booking }) => {
                 transactionId: paymentIntent.id,
             }
 
-            fetch(`https://fast-brook-41352.herokuapp.com/booking/${_id}`, {
+            fetch(`https://doctor-portal-server-mauve.vercel.app/booking/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

@@ -11,7 +11,7 @@ const AvailableAppointment = ({ date }) => {
     const formatedDate = format(date, 'PP');
 
     const { isLoading, data: services, refetch } = useQuery(['available', formatedDate], () =>
-        fetch(`https://fast-brook-41352.herokuapp.com/available?date=${formatedDate}`)
+        fetch(`https://doctor-portal-server-mauve.vercel.app/available?date=${formatedDate}`)
             .then(res => res.json())
     )
     if (isLoading) {
@@ -19,7 +19,7 @@ const AvailableAppointment = ({ date }) => {
     }
 
     // useEffect(() => {
-    //     fetch(`https://fast-brook-41352.herokuapp.com/available?date=${formatedDate}`)
+    //     fetch(`https://doctor-portal-server-mauve.vercel.app/available?date=${formatedDate}`)
     //         .then(res => res.json())
     //         .then(data => setServices(data));
     // }, []);

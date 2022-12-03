@@ -13,7 +13,7 @@ const MyAppointments = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://fast-brook-41352.herokuapp.com/booking?patient=${user.email}`, {
+            fetch(`https://doctor-portal-server-mauve.vercel.app/booking?patient=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

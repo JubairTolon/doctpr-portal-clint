@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51LRf4qKqB6yxEpg7JdpNZPg9pjBBS6qqUVBa5
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `https://fast-brook-41352.herokuapp.com/booking/${id}`;
+    const url = `https://doctor-portal-server-mauve.vercel.app/booking/${id}`;
     const [booking, setBooking] = useState(null);
     useEffect(() => {
         fetch(url, {

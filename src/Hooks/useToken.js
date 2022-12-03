@@ -9,7 +9,7 @@ const useToken = user => {
         const currentUser = { email: email };
 
         if (email) {
-            fetch(`https://fast-brook-41352.herokuapp.com/user/${email}`, {
+            fetch(`https://doctor-portal-server-mauve.vercel.app/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
